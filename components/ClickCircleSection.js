@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { TouchableOpacity, StyleSheet, Dimensions, View } from 'react-native';
 import { COLORS, SIZES } from '../constants';
 
-const widthScreen = Dimensions.get('window').width
-const heightScreen = Dimensions.get('window').height
+const HEIGHT_QUIT_BTN = 2 * SIZES.quitBtn.padding + SIZES.font.medium
+const HEIGHT_BANNER_RULES = SIZES.font.medium
+const WIDTH_SCREEN = Dimensions.get('window').width
+const HEIGHT_SCREEN = Dimensions.get('window').height - HEIGHT_QUIT_BTN - HEIGHT_BANNER_RULES
 
 const generateNewSize = (oldSize) => {
     return Math.max(SIZES.circle.min, oldSize - SIZES.circle.step);
@@ -14,8 +16,8 @@ const ClickCircleSection = () => {
 
     const generateCoordForCircle = () => {
         return {
-            left: Math.random() * (widthScreen - circleSize),
-            top: Math.random() * (heightScreen - circleSize),
+            left: Math.random() * (WIDTH_SCREEN - circleSize),
+            top: Math.random() * (HEIGHT_SCREEN - circleSize),
         }
     }
 
@@ -28,14 +30,16 @@ const ClickCircleSection = () => {
     };
 
     return (
-        <TouchableOpacity 
-            onPress={handleCirclePress} 
-            style={{
-                ...styles.circle(circleSize), 
-                left: circlePosition.left,
-                top: circlePosition.top
-            }} 
-        />
+        <View>
+            <TouchableOpacity 
+                onPress={handleCirclePress} 
+                style={{
+                    ...styles.circle(circleSize), 
+                    left: circlePosition.left,
+                    top: circlePosition.top
+                }} 
+            />
+        </View>
     )
 }
 
