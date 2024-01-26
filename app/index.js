@@ -1,7 +1,8 @@
 import { Stack } from "expo-router";
-import { SafeAreaView, Text } from 'react-native';
+import { SafeAreaView } from 'react-native';
 import QuitButton from "../components/QuitButton";
 import ClickCircleSection from '../components/ClickCircleSection';
+import Rules from "../components/Rules";
 
 const Home = () => {
     return (
@@ -12,7 +13,7 @@ const Home = () => {
 
             <QuitButton/>
             
-            <Text>Cliquer sur le cercle BLEU</Text>
+            <Rules/>
             
             <ClickCircleSection />
         </SafeAreaView>

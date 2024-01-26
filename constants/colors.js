@@ -1,11 +1,12 @@
 const COLORS = {
     background: {
         red: "red",
-        blue: "#0080ff"
+        blue: "#0080ff",
+        white: "white"
     },
     font: {
         white: "white",
-        black: "black"
+        blue: "#0080ff"
     }
 }
 
