@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
+import { COLORS, SIZES } from '../constants';
 
 const widthScreen = Dimensions.get('window').width
 const heightScreen = Dimensions.get('window').height
 
 const generateNewSize = (oldSize) => {
-    return Math.max(24, oldSize - 1);
+    return Math.max(SIZES.circle.min, oldSize - SIZES.circle.step);
 }
 
 const ClickCircleSection = () => {
-    const [circleSize, setCircleSize] = useState(60);
+    const [circleSize, setCircleSize] = useState(SIZES.circle.default);
 
     const generateCoordForCircle = () => {
         return {
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
         width: size,
         height: size,
         borderRadius: size/2,
-        backgroundColor: "#0080ff"
+        backgroundColor: COLORS.background.blue
     })
 });
 
