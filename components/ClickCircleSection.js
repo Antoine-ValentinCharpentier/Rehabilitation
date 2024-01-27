@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { TouchableOpacity, StyleSheet, Dimensions, View } from 'react-native';
 import { COLORS, SIZES } from '../constants';
 
@@ -11,7 +11,7 @@ const generateNewSize = (oldSize) => {
     return Math.max(SIZES.circle.min, oldSize - SIZES.circle.step);
 }
 
-const ClickCircleSection = () => {
+const ClickCircleSection = forwardRef((props, ref) => {
     const [circleSize, setCircleSize] = useState(SIZES.circle.default);
 
     const generateCoordForCircle = () => {
@@ -29,6 +29,15 @@ const ClickCircleSection = () => {
         setCircleSize(prevSize => generateNewSize(prevSize))
     };
 
+    const resetCircle = () => {
+        setCirclePosition(generateCoordForCircle())
+        setCircleSize(SIZES.circle.default)
+    }
+
+    useImperativeHandle(ref, () => ({
+        resetCircle, 
+    }));
+
     return (
         <View>
             <TouchableOpacity 
@@ -41,7 +50,7 @@ const ClickCircleSection = () => {
             />
         </View>
     )
-}
+});
 
 const styles = StyleSheet.create({
     circle: (size) => ({

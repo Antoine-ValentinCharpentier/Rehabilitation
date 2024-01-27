@@ -4,8 +4,9 @@ import { BackHandler } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { COLORS, SIZES } from '../constants';
 
-const QuitButton = () => {
+const QuitButton = ({additionalTask}) => {
   const handleQuit = () => {
+    additionalTask()
     BackHandler.exitApp();
   };
 
