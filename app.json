@@ -7,7 +7,18 @@
     "plugins": [
       "expo-router"
     ],
-    "name": "Rehabilitation",
-    "slug": "Rehabilitation"
+    "name": "Clic Clic",
+    "slug": "Rehabilitation",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "4eb4a3f0-0345-4400-8aec-eefd6159618c"
+      }
+    },
+    "android": {
+      "package": "com.excaliburav.Rehabilitation"
+    }
   }
 }
