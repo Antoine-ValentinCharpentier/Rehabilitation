@@ -2,14 +2,18 @@
 ## Description of the project
 This mobile application is designed to enhance touch precision skills. The main functionality involves displaying circles at various positions on the screen of your phone or tablet. When a circle is tapped, it dynamically changes its location and size.
 
-![Alt text](assets/doc/screenshot.png)
-
 In the context of rehabilitating individuals with impaired motor skills, this app can offers a structured and goal-oriented activity. The repetitive nature of the task aims to stimulate and refine touch precision, contributing to the overall improvement of fine motor control.
+
+<p align="center">
+  <img src="assets/doc/screenshot.png" width="200" />
+</p>
 
 Once install on the target device, you are ready to use it :
 1. Open the application on your mobile device.
 2. Tap on the displayed circles to see them dynamically change position and size.
 3. Focus on improving your touch accuracy through repeated interactions.
+
+To enhance accessibility for users with impaired motor skills, I've introduced a larger exit button to simplify the process of closing the application. This modification aims to streamline the experience, especially for individuals unfamiliar with basic device functionalities, for people who don't know how to do it du to impaired motor skills or facing precision challenges (so the target audience of the app). The substantial size of the button facilitates easier tapping for a smoother application exit.
 
 ## Prerequisites
 - Make sure you have Node.js installed on your machine.
@@ -52,6 +56,6 @@ Click on this button to download the APK file to your local machine.
 You can now use the apk on the target device !!!
 
 ## Notes
-I am not part of the medical staff, I just thought that this app can be used by one of my loved ones and can help them in their rehabilitation process.
+I am not a part of the medical staff; but, I am convinced that this app can be a valuable aid for one of my loved ones in their rehabilitation journey. As an IT enthusiast, I leverage my knowledge to try my best to contribute to the restoration of motor functions for individuals who have experienced impaired motor skills or being in the same case.
 
-Please always refer to your medical staff as each case is unique.
+It's crucial to always consult with your medical staff, given the uniqueness of each case.
