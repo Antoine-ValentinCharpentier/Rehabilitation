@@ -9,6 +9,12 @@
     ],
     "name": "Clic Clic",
     "slug": "Rehabilitation",
+    "icon": "./assets/app-icons/icon.png",
+    "splash": {
+      "image": "./assets/app-icons/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FFFFFF"
+    },
     "extra": {
       "router": {
         "origin": false
@@ -18,7 +24,11 @@
       }
     },
     "android": {
-      "package": "com.excaliburav.Rehabilitation"
+      "package": "com.excaliburav.Rehabilitation",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/app-icons/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
     }
   }
 }
